@@ -113,7 +113,7 @@ export default function Home() {
                       alt="Logo"
                       width={200}
                       height={60}
-                      className="h-[60px] w-auto object-contain"
+                      className="h-[70px] w-[150px] object-cover rounded-md"
                     />
                   </div>
                 </div>
@@ -700,7 +700,7 @@ export default function Home() {
                         alt="Logo"
                         width={200}
                         height={60}
-                        className="h-[60px] w-auto object-contain"
+                      className="h-[70px] w-[150px] object-cover rounded-md"
                       />
                     </div>
                   </div>
