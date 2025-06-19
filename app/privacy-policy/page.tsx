@@ -94,7 +94,6 @@ export default function PrivacyPolicyPage() {
                 <br />
                 <strong>Téléphone :</strong> 022 794 04 32
                 <br />
-                <strong>Adresse :</strong> Av. des Communes-Réunies 72, 1212 Lancy
               </p>
             </div>
           </section>

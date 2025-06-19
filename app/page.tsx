@@ -8,7 +8,8 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { toast, Toaster } from "sonner"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Menu, X, Phone, Mail, MapPin, CheckCircle, AlertCircle, ExternalLink } from "lucide-react"
+import { Menu, X, Phone, Mail, MapPin, CheckCircle, AlertCircle, Facebook, Instagram, Linkedin } from "lucide-react"
+import { ArticlesCarousel } from "@/components/articles/articles-carousel"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("accueil")
@@ -91,42 +92,6 @@ export default function Home() {
     }
   }
 
-  // Articles data
-  const articles = [
-    {
-      id: 1,
-      title: "Nouvelles réglementations fiscales 2024",
-      date: "15 Janvier 2024",
-      description: "Découvrez les changements importants en matière de fiscalité pour cette année.",
-      pdfUrl: "/documents/reglementations-fiscales-2024.pdf",
-    },
-    {
-      id: 2,
-      title: "Guide de la digitalisation comptable",
-      date: "8 Janvier 2024",
-      description: "Comment moderniser votre comptabilité avec les outils numériques.",
-      pdfUrl: "/documents/guide-digitalisation-comptable.pdf",
-    },
-    {
-      id: 3,
-      title: "Optimisation fiscale pour PME",
-      date: "22 Décembre 2023",
-      description: "Stratégies légales pour réduire votre charge fiscale.",
-      pdfUrl: "/documents/optimisation-fiscale-pme.pdf",
-    },
-    {
-      id: 4,
-      title: "Gestion de la TVA en Suisse",
-      date: "10 Décembre 2023",
-      description: "Tout ce qu'il faut savoir sur la TVA suisse en 2024.",
-      pdfUrl: "/documents/gestion-tva-suisse.pdf",
-    },
-  ]
-
-  const handleArticleClick = (pdfUrl: string) => {
-    window.open(pdfUrl, "_blank")
-  }
-
   return (
     <>
       <Toaster position="bottom-right" richColors closeButton />
@@ -137,19 +102,18 @@ export default function Home() {
             scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-6 w-full">
+          <div className="container mx-auto px-6">
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 z-20">
                 <div className="flex items-center gap-2 z-20">
-                  <div className="rounded-md">
+                  <div className="bg-primary/5 p-2 rounded-md">
                     <Image
                       src="/logo.png"
                       alt="Logo"
-                      width={150} // requis par Next.js
-                      height={50} // requis par Next.js
-                      className="h-[50px] w-auto object-contain"
-                      priority
+                      width={200}
+                      height={60}
+                      className="h-[60px] w-auto object-contain"
                     />
                   </div>
                 </div>
@@ -157,57 +121,177 @@ export default function Home() {
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center gap-10">
-                {["accueil", "nous", "services", "actualites", "contact"].map((section) => (
-                  <button
-                    key={section}
-                    onClick={() => scrollToSection(section)}
-                    className={`font-medium transition-colors relative ${
-                      activeSection === section ? "text-primary" : "hover:text-primary"
-                    }`}
-                  >
-                    {section === "actualites" ? "Actualités" : section.charAt(0).toUpperCase() + section.slice(1)}
-                    {activeSection === section && (
-                      <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"></span>
-                    )}
-                  </button>
-                ))}
+                <button
+                  onClick={() => scrollToSection("accueil")}
+                  className={`font-medium transition-colors relative ${
+                    activeSection === "accueil" ? "text-primary" : "hover:text-primary"
+                  }`}
+                >
+                  Accueil
+                  {activeSection === "accueil" && (
+                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                  )}
+                </button>
+                <button
+                  onClick={() => scrollToSection("nous")}
+                  className={`font-medium transition-colors relative ${
+                    activeSection === "nous" ? "text-primary" : "hover:text-primary"
+                  }`}
+                >
+                  Nous
+                  {activeSection === "nous" && (
+                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                  )}
+                </button>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className={`font-medium transition-colors relative ${
+                    activeSection === "services" ? "text-primary" : "hover:text-primary"
+                  }`}
+                >
+                  Services
+                  {activeSection === "services" && (
+                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                  )}
+                </button>
+                <button
+                  onClick={() => scrollToSection("actualites")}
+                  className={`font-medium transition-colors relative ${
+                    activeSection === "actualites" ? "text-primary" : "hover:text-primary"
+                  }`}
+                >
+                  Actualités
+                  {activeSection === "actualites" && (
+                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                  )}
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className={`font-medium transition-colors relative ${
+                    activeSection === "contact" ? "text-primary" : "hover:text-primary"
+                  }`}
+                >
+                  Contact
+                  {activeSection === "contact" && (
+                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                  )}
+                </button>
               </nav>
 
-              {/* Mobile Menu Button */}
-              <button
-                className="md:hidden z-20 p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-              >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
+              {/* Social Media Links & Mobile Menu Button */}
+              <div className="flex items-center gap-4">
+                {/* Social Media Links - Desktop */}
+                <div className="hidden md:flex items-center gap-3">
+                  <a
+                    href="https://www.facebook.com/comptarial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-4 w-4 text-primary" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/comptarial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-4 w-4 text-primary" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/comptarial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-4 w-4 text-primary" />
+                  </a>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button
+                  className="md:hidden z-20 p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                >
+                  {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                </button>
+              </div>
             </div>
           </div>
 
           {/* Mobile Menu */}
           <div
-            className={`fixed inset-0 bg-white/95 backdrop-blur-sm z-10 flex flex-col justify-center items-center text-center gap-8 transition-all duration-300 ${
+            className={`fixed inset-0 bg-white/95 backdrop-blur-sm z-10 flex flex-col items-center justify-center gap-8 transition-all duration-300 ${
               isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
             } md:hidden`}
           >
-            {["accueil", "nous", "services", "actualites", "contact"].map((section) => (
-              <button
-                key={section}
-                onClick={() => {
-                  scrollToSection(section);
-                  setIsMenuOpen(false);
-                }}
-                className={`text-2xl font-medium transition-colors ${
-                  activeSection === section ? "text-primary" : ""
-                }`}
+            <button
+              onClick={() => scrollToSection("accueil")}
+              className={`text-2xl font-medium transition-colors ${activeSection === "accueil" ? "text-primary" : ""}`}
+            >
+              Accueil
+            </button>
+            <button
+              onClick={() => scrollToSection("nous")}
+              className={`text-2xl font-medium transition-colors ${activeSection === "nous" ? "text-primary" : ""}`}
+            >
+              Nous
+            </button>
+            <button
+              onClick={() => scrollToSection("services")}
+              className={`text-2xl font-medium transition-colors ${activeSection === "services" ? "text-primary" : ""}`}
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("actualites")}
+              className={`text-2xl font-medium transition-colors ${activeSection === "actualites" ? "text-primary" : ""}`}
+            >
+              Actualités
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className={`text-2xl font-medium transition-colors ${activeSection === "contact" ? "text-primary" : ""}`}
+            >
+              Contact
+            </button>
+
+            {/* Social Media Links - Mobile */}
+            <div className="flex items-center gap-4 mt-4">
+              <a
+                href="https://www.facebook.com/comptarial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                aria-label="Facebook"
               >
-                {section === "actualites" ? "Actualités" : section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
-            ))}
+                <Facebook className="h-6 w-6 text-primary" />
+              </a>
+              <a
+                href="https://www.instagram.com/comptarial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-6 w-6 text-primary" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/comptarial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6 text-primary" />
+              </a>
+            </div>
           </div>
         </header>
-
-
 
         {/* Main Content */}
         <main className="flex-1">
@@ -216,8 +300,8 @@ export default function Home() {
             id="accueil"
             className="min-h-screen flex items-center relative bg-gradient-to-br from-gray-50 to-gray-100 pt-16"
           >
-            <div className="container mx-auto px-4 py-20">
-              <div className="grid md:grid-cols-2 items-center gap-12">
+            <div className="container px-4 py-20">
+              <div className="grid md:grid-cols-2 items-center gap-20">
                 {/* Texte à gauche */}
                 <div className="space-y-6 animate-fade-in">
                   <h1 className="text-5xl font-bold leading-tight">
@@ -246,12 +330,13 @@ export default function Home() {
                 </div>
 
                 {/* Image à droite */}
-                <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+                <div className="rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
                   <Image
-                    src="/placeholder.svg?height=800&width=800"
+                    src="/logo.png"
                     alt="Image d'accueil"
-                    width={800}
-                    height={800}
+                    width={500}
+                    height={400}
+                    className="w-full h-[400px] object-cover"
                   />
                 </div>
               </div>
@@ -265,11 +350,11 @@ export default function Home() {
                 {/* Image à gauche */}
                 <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300 order-2 md:order-1">
                   <Image
-                    src="/placeholder.svg?height=800&width=800"
+                    src="/logo.png"
                     alt="Notre équipe"
-                    width={800}
-                    height={800}
-                    className="w-full h-auto object-cover"
+                    width={500}
+                    height={400}
+                    className="w-full h-[400px] object-cover"
                   />
                 </div>
 
@@ -285,6 +370,40 @@ export default function Home() {
                     choix de la transformation numérique. Notre mission est de rendre la gestion comptable plus simple,
                     accessible et transparente pour tous.
                   </p>
+
+                  {/* Social Media Links dans la section À Propos */}
+                  <div className="pt-6">
+                    <p className="text-sm font-medium text-gray-700 mb-3">Suivez-nous sur nos réseaux sociaux :</p>
+                    <div className="flex items-center gap-4">
+                      <a
+                        href="https://www.facebook.com/comptarial"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors group"
+                      >
+                        <Facebook className="h-5 w-5 text-blue-600" />
+                        <span className="text-sm font-medium text-blue-600 group-hover:text-blue-700">Facebook</span>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/comptarial"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 p-3 rounded-lg bg-pink-50 hover:bg-pink-100 transition-colors group"
+                      >
+                        <Instagram className="h-5 w-5 text-pink-600" />
+                        <span className="text-sm font-medium text-pink-600 group-hover:text-pink-700">Instagram</span>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/comptarial"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors group"
+                      >
+                        <Linkedin className="h-5 w-5 text-blue-700" />
+                        <span className="text-sm font-medium text-blue-700 group-hover:text-blue-800">LinkedIn</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -309,11 +428,11 @@ export default function Home() {
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image
-                      src="/placeholder.svg?height=24&width=24"
+                      src="/comptabilite.webp"
                       alt="Comptabilité"
                       width={24}
                       height={24}
-                      className="w-6 h-6"
+                      className="w-6 h-6 rounded-full"
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Comptabilité en ligne</h3>
@@ -335,13 +454,7 @@ export default function Home() {
 
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    <Image
-                      src="/placeholder.svg?height=24&width=24"
-                      alt="Paie"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
-                    />
+                    <Image src="/dollar.webp" alt="Paie" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Gestion de la paie numérique</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
@@ -363,13 +476,7 @@ export default function Home() {
 
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    <Image
-                      src="/placeholder.svg?height=24&width=24"
-                      alt="Conseil"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
-                    />
+                    <Image src="/profil.webp" alt="Conseil" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Conseil et accompagnement personnalisé</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
@@ -393,11 +500,11 @@ export default function Home() {
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image
-                      src="/placeholder.svg?height=24&width=24"
+                      src="/argent.webp"
                       alt="Déclarations"
                       width={24}
                       height={24}
-                      className="w-6 h-6"
+                      className="w-6 h-6 rounded-full"
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Déclarations fiscales automatisées</h3>
@@ -420,13 +527,7 @@ export default function Home() {
 
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    <Image
-                      src="/placeholder.svg?height=24&width=24"
-                      alt="Documents"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
-                    />
+                    <Image src="/pdf.webp" alt="Documents" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Gestion des documents fiscaux et comptables</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
@@ -460,38 +561,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {articles.map((article) => (
-                  <div
-                    key={article.id}
-                    className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group"
-                    onClick={() => handleArticleClick(article.pdfUrl)}
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                          {article.title}
-                        </h3>
-                        <p className="text-sm text-gray-500 mb-3">{article.date}</p>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{article.description}</p>
-                      </div>
-                      <ExternalLink className="h-5 w-5 text-primary ml-4 group-hover:scale-110 transition-transform" />
-                    </div>
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                      <span className="text-sm text-primary font-medium">Lire l'article complet</span>
-                      <div className="bg-primary/10 p-2 rounded-full">
-                        <Image
-                          src="/placeholder.svg?height=16&width=16"
-                          alt="PDF"
-                          width={16}
-                          height={16}
-                          className="w-4 h-4"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <ArticlesCarousel />
             </div>
           </section>
 
@@ -502,9 +572,10 @@ export default function Home() {
           >
             <div className="container mx-auto px-4 py-20">
               <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
-                {/* Left column - Contact info */}
+                {/* Left column - Contact */}
                 <div className="space-y-6">
-                  <h2 className="text-5xl font-bold leading-tight">Prendre contact</h2>
+                  <h2 className="text-4xl font-bold">Contact</h2>
+                  <div className="h-1 w-20 bg-primary rounded-full mb-6"></div>
                   <p className="text-muted-foreground text-lg">
                     Nous sommes à votre écoute et prêts à répondre à toutes vos questions. Notre équipe s&apos;engage à
                     vous répondre dans les 24 heures suivant votre message.
@@ -623,22 +694,51 @@ export default function Home() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 z-20">
                   <div className="flex items-center gap-2 z-20">
-                    <div className="rounded-md">
+                    <div className="bg-primary/10 p-2 rounded-md">
                       <Image
                         src="/logo.png"
                         alt="Logo"
-                        width={150} // requis par Next.js
-                        height={50} // requis par Next.js
-                        className="h-[50px] w-auto object-contain"
-                        priority
+                        width={200}
+                        height={60}
+                        className="h-[60px] w-auto object-contain"
                       />
                     </div>
                   </div>
-                  <div className="font-bold text-xl tracking-tight">Comptarial</div>
                 </Link>
                 <p className="text-gray-400 mt-4">
                   Solutions comptables et fiduciaires innovantes pour les entreprises modernes.
                 </p>
+
+                {/* Social Media Links dans le Footer */}
+                <div className="flex items-center gap-3 mt-6">
+                  <a
+                    href="https://www.facebook.com/comptarial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-5 w-5 text-blue-400" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/comptarial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-5 w-5 text-pink-400" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/comptarial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-5 w-5 text-blue-300" />
+                  </a>
+                </div>
               </div>
 
               <div>
