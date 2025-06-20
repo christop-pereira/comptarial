@@ -294,7 +294,7 @@ export default function Home() {
         {/* Main Content */}
         <main className="flex-1">
           {/* Accueil */}
-          <section id="accueil" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-100 to-orange-50 pt-16">
+          <section id="accueil" className="min-h-screen flex items-center relative bg-gradient-to-br from-gray-50 to-gray-100 pt-16">
             <div className="container px-4 py-20">
               <div className="grid md:grid-cols-2 items-center gap-20">
                 {/* Texte à gauche */}
@@ -342,7 +342,7 @@ export default function Home() {
           </section>
 
           {/* Nous */}
-          <section id="nous" className="min-h-screen flex items-center bg-white relative pt-16">
+          <section id="nous" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-50 to-orange-100 pt-16">
             <div className="container mx-auto px-4 py-20">
               <div className="grid md:grid-cols-2 items-center gap-20">
             {/* Image à gauche */}
@@ -436,7 +436,7 @@ export default function Home() {
           </section>
 
           {/* Services */}
-          <section id="services" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-100 to-orange-50 pt-20">
+          <section id="services" className="min-h-screen flex items-center relative bg-gradient-to-br from-gray-50 to-gray-100 pt-20">
             <div className="container mx-auto px-4 py-10">
               <div className="text-center max-w-3xl mx-auto mb-10">
                 <h2 className="text-4xl font-bold">Nos Services</h2>
@@ -633,7 +633,7 @@ export default function Home() {
           </section>
 
           {/* Nos Actualités */}
-          <section id="actualites" className="min-h-screen flex items-center bg-white relative pt-16">
+          <section id="actualites" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-50 to-orange-100 pt-16">
             <div className="container mx-auto px-4 py-20">
               <div className="text-center max-w-3xl mx-auto mb-12">
                 <h2 className="text-4xl font-bold">Nos Actualités</h2>
@@ -649,7 +649,7 @@ export default function Home() {
           </section>
 
           {/* Contact */}
-          <section id="contact" className="min-h-screen flex items-center bg-gradient-to-br from-orange-100 to-orange-50 pt-16">
+          <section id="contact" className="min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-gray-100 pt-16">
             <div className="container mx-auto px-4 py-20">
               <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
                 {/* Left column - Contact */}
