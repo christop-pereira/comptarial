@@ -308,8 +308,6 @@ export default function Home() {
                     efficaces.
                     Nous privilégions le travail à distance, pour vous garantir une gestion fluide, une grande réactivité et un
                     gain de temps.
-                    Des rencontres en présentiel peuvent être envisagées ponctuellement, notamment dans le cadre de
-                    relations établies ou de besoins spécifiques
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -330,7 +328,7 @@ export default function Home() {
                 {/* Image à droite */}
                 <div className="rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
                   <Image
-                    src="/accueil.jpeg"
+                    src="/test.jpeg"
                     alt="Image d'accueil"
                     width={500}
                     height={400}
@@ -365,35 +363,19 @@ export default function Home() {
                     Une comptable passionnée au service de votre réussite financière.
                   </p>
                   <p className="text-muted-foreground text-lg">
-                    La fiduciaire Comptarial propose une large gamme de prestations aux PME, indépendants et
-                    particuliers.
                     À l’écoute de nos clients, nous adoptons une approche globale, personnalisée et adaptée à chaque
                     situation.
-                  </p>
-                  <p className="text-muted-foreground text-lg">
                     En tant que partenaire de confiance, nous vous accompagnons au plus proche de vos intérêts, avec un
                     souci constant de rigueur, transparence et réactivité.
                     Nous privilégions des relations durables, fondées sur l’échange, la disponibilité et la confidentialité.
                   </p>
                   <p className="text-muted-foreground text-lg">
                     Notre fonctionnement repose principalement sur le travail à distance, afin de vous garantir une gestion
-                    fluide, flexible et efficace, où que vous soyez.
-                    Des rencontres en présentiel peuvent être envisagées ponctuellement, notamment dans le cadre de
-                    situations spécifiques.
-                  </p>
-                  <p className="text-muted-foreground text-lg">
+                    fluide, flexible et efficace.
                     Grâce à la formation continue et à une veille active sur les évolutions légales, comptables, fiscales,
                     salariales et administratives, nous restons à la hauteur des exigences actuelles.
-                    Notre complémentarité en interne nous permet de traiter chaque dossier de manière concertée,
-                    assurant ainsi une maîtrise complète et une prise en charge sur mesure.
-                  </p>
-                  <p className="text-muted-foreground text-lg">
                     Chaque client étant unique, nous adaptons nos solutions à vos besoins réels et à vos objectifs
                     professionnels ou personnels.
-                  </p>
-                  <p className="text-muted-foreground text-lg">
-                    Des questions ? N’hésitez pas à nous contacter : nous vous répondrons avec plaisir, dans les meilleurs
-                    délais.
                   </p>
 
 
