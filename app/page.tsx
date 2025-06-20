@@ -452,12 +452,12 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Comptabilité</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow text-sm">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     Nous vous accompagnons dans la gestion complète de votre comptabilité, 
                     pour que vous puissiez vous concentrer sur votre activité.
                   </p>
 
-                  <Accordion type="single" collapsible className="mt-auto">
+                  <Accordion type="single" collapsible>
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
@@ -484,11 +484,11 @@ export default function Home() {
                     <Image src="/dollar.webp" alt="Paie" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Salaires et gestion du personnel</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow text-sm">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     Nous vous accompagnons dans la gestions administrative de vos collaborateurs avec discrétion et en conformité aux obligations légales.
                   </p>
 
-                  <Accordion type="single" collapsible className="mt-auto">
+                  <Accordion type="single" collapsible>
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
@@ -516,12 +516,12 @@ export default function Home() {
                     <Image src="/profil.webp" alt="Conseil" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Fiscalité</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow text-sm">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     Que vous soyez un particulier, un indépendant ou une entreprise, nous vous accompagnons dans toutes vos démarches fisacles 
                     avec précision, confidentialité et clarté.
                   </p>
 
-                  <Accordion type="single" collapsible className="mt-auto">
+                  <Accordion type="single" collapsible>
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
@@ -555,12 +555,12 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Services administratifs</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow text-sm">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     Nous vous soutenons dans toutes vos démarches administratives, qu'elles soient ponctuelles ou régulières,
                     avec réactivité, rigueur et discrétion.
                   </p>
 
-                  <Accordion type="single" collapsible className="mt-auto">
+                  <Accordion type="single" collapsible>
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
@@ -590,12 +590,12 @@ export default function Home() {
                     <Image src="/pdf.webp" alt="Documents" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Gestion des documents</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow text-sm">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     Nous vous aidons à organiser, sécuriser et centraliser vos documents fiscaux, comptables et administratifs pour une gestion
                     simplifiée et conforme aux éxigences.
                   </p>
 
-                  <Accordion type="single" collapsible className="mt-auto">
+                  <Accordion type="single" collapsible>
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
