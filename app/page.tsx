@@ -99,6 +99,18 @@ export default function Home() {
     <>
       <Toaster position="bottom-right" richColors closeButton />
       <div className="min-h-screen flex flex-col">
+        
+        {/* Scroll to Top Button */}
+        {showScrollTop && (
+          <button
+            onClick={() => scrollToSection("accueil")}
+            className="fixed bottom-8 right-8 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
+            aria-label="Remonter à l'accueil"
+          >
+            <ArrowUp className="w-6 h-6" />
+          </button>
+        )}
+
         {/* Header */}
         <header
           className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-md py-3`}
@@ -291,17 +303,6 @@ export default function Home() {
             </div>
           </div>
         </header>
-
-        {/* Scroll to Top Button */}
-        {showScrollTop && (
-          <button
-            onClick={() => scrollToSection("accueil")}
-            className="fixed bottom-8 right-8 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
-            aria-label="Remonter à l'accueil"
-          >
-            <ArrowUp className="w-6 h-6" />
-          </button>
-        )}
 
         {/* Main Content */}
         <main className="flex-1">
