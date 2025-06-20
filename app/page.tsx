@@ -663,7 +663,7 @@ export default function Home() {
                       <div className="bg-primary rounded-full p-3 text-white">
                         <Mail className="w-5 h-5" />
                       </div>
-                      <a href="mailto:contact@comptarial.ch" className="text-lg">
+                      <a href="mailto:rosa@comptarial.ch" className="text-lg">
                         rosa@comptarial.ch
                       </a>
                     </div>
