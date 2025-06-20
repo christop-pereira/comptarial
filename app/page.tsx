@@ -10,8 +10,10 @@ import { toast, Toaster } from "sonner"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Menu, X, Phone, Mail, MapPin, CheckCircle, AlertCircle, Facebook, Instagram, Linkedin } from "lucide-react"
 import { ArticlesCarousel } from "@/components/articles/articles-carousel"
+import { ArrowUp } from "lucide-react"
 
 export default function Home() {
+  const [showScrollTop, setShowScrollTop] = useState(false)
   const [activeSection, setActiveSection] = useState("accueil")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -20,6 +22,7 @@ export default function Home() {
   // Handle scroll and update active section
   useEffect(() => {
     const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 200)
       const sections = document.querySelectorAll("section")
       const scrollPosition = window.scrollY + window.innerHeight / 3
 
@@ -288,6 +291,17 @@ export default function Home() {
             </div>
           </div>
         </header>
+
+        {/* Scroll to Top Button */}
+        {showScrollTop && (
+          <button
+            onClick={() => scrollToSection("accueil")}
+            className="fixed bottom-8 right-8 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
+            aria-label="Remonter à l'accueil"
+          >
+            <ArrowUp className="w-6 h-6" />
+          </button>
+        )}
 
         {/* Main Content */}
         <main className="flex-1">
