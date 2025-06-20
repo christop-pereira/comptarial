@@ -88,6 +88,8 @@ export default function Home() {
         body: JSON.stringify({ name, email, message })
       });
 
+      console.log(response)
+
       if (!response.ok) {
         throw new Error("Erreur lors de l'envoi du message.");
       }
