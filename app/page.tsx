@@ -358,7 +358,7 @@ export default function Home() {
                   <h2 className="text-4xl font-bold">À Propos de Nous</h2>
                   <div className="h-1 w-20 bg-primary rounded-full"></div>
                   <p className="text-xl text-muted-foreground">
-                    Une comptable passionnée au service de votre réussite financière.
+                    Une comptable passionnée au service de vos besoins.
                   </p>
                   <p className="text-muted-foreground text-lg">
                     À l’écoute de nos clients, nous adoptons une approche globale, personnalisée et adaptée à chaque
@@ -422,9 +422,8 @@ export default function Home() {
                 <h2 className="text-4xl font-bold">Nos Services</h2>
                 <div className="h-1 w-20 bg-primary rounded-full mx-auto my-4"></div>
                 <p className="text-lg text-muted-foreground">
-                  Chaque situation étant unique, nos honoraires varient généralement entre CHF 90.- et CHF 250.- 
-                  en fonction des prestations à effectuer. Nous veillons à vous proposer des solutions sur mesure, 
-                  parfaitement adaptées à vos besoins. Un devis personnalisé peut bien entendu vous être fourni sur simple demande.
+                  Chaque situation étant unique, nos honoraires varient de CHF 90.- à CHF 250.- 
+                  en fonction des prestations à effectuer. Un devis personnalisé vous est fourni sur demande.
                 </p>
               </div>
 
@@ -451,18 +450,14 @@ export default function Home() {
                       <AccordionContent className="text-sm">
                         <p className="mt-2">Nos prestations incluent :</p>
                         <ul className="list-disc pl-5 space-y-1 mt-3">
-                          <li>Procédure d’ouverture comptable</li>
-                          <li>Reprise de la comptabilité selon les normes en vigueur</li>
-                          <li>Saisie informatique des écritures</li>
-                          <li>Tenue comptable sur logiciel agréé, adaptée à votre structure</li>
-                          <li>Procédures de bouclement</li>
+                          <li>Procédure d’ouverture comptable (reprise de la comptabilité selon la législation en vigueur)</li>
+                          <li>Saisie informatique des écritures (tenue comtpable sur logiciel adapté à votre structure)</li>
+                          <li>Procédures de bouclement (clôture annuelle avec contrôle, régularisations et préparations aux obligations fiscales)</li>
                           <li>Clôture annuelle avec contrôle, régularisations et préparation aux obligations fiscales</li>
                           <li>Établissement des états financiers (bilan, compte de résultat, annexes selon les exigences légales)</li>
-                          <li>Décomptes TVA (méthodes effective, taux de la dette fiscale nette, choix et traitement adapté à votre activité)</li>
-                          <li>Décompte de concordance annuelle</li>
-                          <li>Vérification de cohérence entre comptabilité et TVA déclarée</li>
-                          <li>Accompagnement lors de contrôles des administrations</li>
-                          <li>Préparation, gestion et suivi des vérifications fiscales ou AVS</li>
+                          <li>Décomptes TVA (méthodes effective, taux de la dette fiscale nette)</li>
+                          <li>Décompte de concordance annuelle (vérification entre comptablité et TVA déclarée)</li>
+                          <li>Accompagnement lors de contrôles des administrations (préparation, gestion et suivi des vérifications fiscales ou sociales)</li>
                         </ul>
                         <p className="mt-3">Nous mettons tout en oeuvre pour vous garantir une comptabilité fiable, à jour et conforme, 
                         afin que vous puissiez prendre les meilleures décisions en toute sénérité.</p>
@@ -488,7 +483,7 @@ export default function Home() {
                         <ul className="list-disc pl-5 space-y-1 mt-3">
                           <li>Établissement des fiches de salaires (calcul précis et conformes aux conventions applicables)</li>
                           <li>Déclarations annuelles aux assurances sociales (coordination et envoi des données aux caisses : AVS, LPP, LAA, etc.)</li>
-                          <li>Établissement des certificats de salaire pour vos collaborateurs en fin d’année</li>
+                          <li>Établissement des certificats de salaire pour vos collaborateurs</li>
                           <li>Gestion complète des procédures d’engagement, de départ et de licenciement</li>
                           <li>Affiliation aux assurances sociales (mise en place des affiliations obligatoires dès l’embauche)</li>
                           <li>Rédaction des contrats de travail conformes au droit suisse du travail</li>
@@ -561,8 +556,8 @@ export default function Home() {
                           <li>Rédaction de courriers et documents officiels adaptés à chaque situation</li>
                           <li>Rédaction et vérification de contrats commerciaux adaptés à vos activités</li>
                           <li>Gestion des débiteurs et créanciers (suivi des factures, relances, échéanciers)</li>
-                          <li>Création d’entreprise (de la planification à l’immatriculation)</li>
-                          <li>Préparation de dossiers en vue de contrôles (fiscaux ou administratifs)</li>
+                          <li>Création d’entreprise (dès la planification)</li>
+                          <li>Préparation des dossiers en vue de contrôles (fiscaux ou administratifs)</li>
                           <li>Classement physique ou numérique des documents pour un accès rapide</li>
                           <li>Élaboration de tableurs personnalisés adaptés à vos besoins de suivi</li>
                           <li>Modification des acomptes et contrôle des bordereaux fiscaux auprès des administrations</li>

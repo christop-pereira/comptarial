@@ -11,7 +11,7 @@ const articlesData: Article[] = [
     id: 1,
     title: "Comment cotiser à l'AVS ? (Guide pratique)",
     date: "18 Juin 2025",
-    description: "Découvrez les changements importants en matière de fiscalité pour cette année.",
+    description: "Découvrez vos obligations en matière d'AVS de 18 à 65 ans.",
     pdfUrl: "cotisations-AVS.pdf",
   }
 ]
