@@ -305,7 +305,7 @@ export default function Home() {
                   <p className="text-xl text-muted-foreground">Une fiduciaire moderne à votre écoute.</p>
                   <p className="text-muted-foreground text-lg">
                     Nous proposons des solutions sur mesure, flexibles et efficaces, adaptées à chaque situation.
-                    Restez informé grâce à nos actualités, conçues pour être claires et accessibles à tous.
+                    Restez informé grâce à nos actualités, conçues pour être claires et accessibles.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
