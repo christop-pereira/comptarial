@@ -11,6 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Menu, X, Phone, Mail, MapPin, CheckCircle, AlertCircle, Facebook, Instagram, Linkedin } from "lucide-react"
 import { ArticlesCarousel } from "@/components/articles/articles-carousel"
 import { ArrowUp } from "lucide-react"
+import { FadeInSection } from "@/components/FadeInSection"
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -322,6 +323,7 @@ export default function Home() {
         {/* Main Content */}
         <main className="flex-1">
           {/* Accueil */}
+          <FadeInSection>
           <section id="accueil" className="min-h-screen flex items-center relative bg-gradient-to-br from-gray-50 to-gray-100 pt-16">
             <div className="container px-4 py-20">
               <div className="grid md:grid-cols-2 items-center gap-20">
@@ -364,8 +366,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+          </FadeInSection>
 
           {/* Nous */}
+          <FadeInSection>
           <section id="nous" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-50 to-orange-100 pt-16">
             <div className="container mx-auto px-4 py-20">
               <div className="grid md:grid-cols-2 items-center gap-20">
@@ -442,8 +446,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+          </FadeInSection>
 
           {/* Services */}
+          <FadeInSection>
           <section id="services" className="min-h-screen flex items-center relative bg-gradient-to-br from-gray-50 to-gray-100 pt-20">
             <div className="container mx-auto px-4 py-10">
               <div className="text-center max-w-3xl mx-auto mb-10">
@@ -634,8 +640,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+          </FadeInSection>
 
           {/* Nos Actualités */}
+          <FadeInSection>
           <section id="actualites" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-50 to-orange-100 pt-16">
             <div className="container mx-auto px-4 py-20">
               <div className="text-center max-w-3xl mx-auto mb-12">
@@ -650,8 +658,10 @@ export default function Home() {
               <ArticlesCarousel />
             </div>
           </section>
+          </FadeInSection>
 
           {/* Contact */}
+          <FadeInSection>
           <section id="contact" className="min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-gray-100 pt-16">
             <div className="container mx-auto px-4 py-20">
               <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
@@ -754,6 +764,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+          </FadeInSection>
         </main>
 
         {/* Footer */}
