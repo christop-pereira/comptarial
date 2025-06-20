@@ -302,7 +302,7 @@ export default function Home() {
                   <h1 className="text-5xl font-bold leading-tight">
                     Bienvenue chez <span className="text-primary">Comptarial</span>
                   </h1>
-                  <p className="text-xl text-muted-foreground">Une fiduciaire moderne, à votre écoute.</p>
+                  <p className="text-xl text-muted-foreground">Une fiduciaire moderne à votre écoute.</p>
                   <p className="text-muted-foreground text-lg">
                     Nous proposons des solutions sur mesure, flexibles et efficaces, adaptées à chaque situation.
                     Restez informé grâce à nos actualités, conçues pour être claires et accessibles à tous.
