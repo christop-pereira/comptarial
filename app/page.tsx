@@ -633,7 +633,7 @@ export default function Home() {
                   <div className="h-1 w-20 bg-primary rounded-full mb-6"></div>
                   <p className="text-muted-foreground text-lg">
                     Nous sommes à votre écoute et prêts à répondre à toutes vos questions. Notre équipe s&apos;engage à
-                    vous répondre dans les 24 heures suivant votre message.
+                    vous répondre rapidement.
                   </p>
 
                   <div className="space-y-6 mt-10">
