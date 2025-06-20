@@ -98,9 +98,7 @@ export default function Home() {
       <div className="min-h-screen flex flex-col">
         {/* Header */}
         <header
-          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-            scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
-          }`}
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-md py-3`}
         >
           <div className="container mx-auto px-6">
             <div className="flex items-center justify-between">
@@ -358,7 +356,7 @@ export default function Home() {
                   <h2 className="text-4xl font-bold">À Propos de Nous</h2>
                   <div className="h-1 w-20 bg-primary rounded-full"></div>
                   <p className="text-xl text-muted-foreground">
-                    Une comptable passionnée au service de vos besoins.
+                    Notre passion au service de vos besoins.
                   </p>
                   <p className="text-muted-foreground text-lg">
                     À l’écoute de nos clients, nous adoptons une approche globale, personnalisée et adaptée à chaque
