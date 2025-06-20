@@ -10,14 +10,13 @@ export default function PrivacyPolicyPage() {
           <Link href="/" className="flex items-center gap-3">
             <div className="bg-primary/5 p-2 rounded-md">
               <Image
-                src="/placeholder.svg?height=25&width=25"
+                src="/logo.png"
                 alt="Logo"
                 width={25}
                 height={25}
-                className="w-full h-auto object-cover"
+                      className="h-[70px] w-[150px] object-cover rounded-md"
               />
             </div>
-            <div className="font-bold text-xl tracking-tight">Comptarial</div>
           </Link>
         </div>
       </header>
@@ -43,9 +42,6 @@ export default function PrivacyPolicyPage() {
             <p className="text-gray-700 leading-relaxed mb-4">Nous collectons les types de données suivants :</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Informations d&apos;identification (nom, prénom, email)</li>
-              <li>Informations sur votre entreprise</li>
-              <li>Données comptables et financières</li>
-              <li>Données de navigation et d&apos;utilisation</li>
             </ul>
           </section>
 
@@ -54,9 +50,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-gray-700 leading-relaxed mb-4">Nous utilisons vos données pour :</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Fournir nos services comptables et fiduciaires</li>
-              <li>Améliorer notre plateforme</li>
               <li>Communiquer avec vous</li>
-              <li>Respecter nos obligations légales</li>
             </ul>
           </section>
 
@@ -90,9 +84,9 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="mt-4 p-4 bg-gray-50 rounded-lg">
               <p className="text-gray-700">
-                <strong>Email :</strong> contact@comptarial.ch
+                <strong>Email :</strong> rosa@comptarial.ch
                 <br />
-                <strong>Téléphone :</strong> 022 794 04 32
+                <strong>Téléphone :</strong> +41 22 794 04 32 
                 <br />
               </p>
             </div>

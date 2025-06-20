@@ -106,8 +106,7 @@ export default function Home() {
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 z-20">
-                <div className="flex items-center gap-2 z-20">
-                  <div className="bg-primary/5 p-2 rounded-md">
+                <div className="flex items-center gap-2 z-20 p-2 rounded-md">
                     <Image
                       src="/logo.png"
                       alt="Logo"
@@ -115,7 +114,6 @@ export default function Home() {
                       height={60}
                       className="h-[70px] w-[150px] object-cover rounded-md"
                     />
-                  </div>
                 </div>
               </Link>
 
@@ -192,7 +190,7 @@ export default function Home() {
                     <Facebook className="h-4 w-4 text-primary" />
                   </a>
                   <a
-                    href="https://www.instagram.com/comptarial"
+                    href="https://www.instagram.com/rosa.damasi.o"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -201,7 +199,7 @@ export default function Home() {
                     <Instagram className="h-4 w-4 text-primary" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/comptarial"
+                    href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -272,7 +270,7 @@ export default function Home() {
                 <Facebook className="h-6 w-6 text-primary" />
               </a>
               <a
-                href="https://www.instagram.com/comptarial"
+                href="https://www.instagram.com/rosa.damasi.o"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -281,7 +279,7 @@ export default function Home() {
                 <Instagram className="h-6 w-6 text-primary" />
               </a>
               <a
-                href="https://www.linkedin.com/company/comptarial"
+                href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -296,10 +294,7 @@ export default function Home() {
         {/* Main Content */}
         <main className="flex-1">
           {/* Accueil */}
-          <section
-            id="accueil"
-            className="min-h-screen flex items-center relative bg-gradient-to-br from-gray-50 to-gray-100 pt-16"
-          >
+          <section id="accueil" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-100 to-orange-50 pt-16">
             <div className="container px-4 py-20">
               <div className="grid md:grid-cols-2 items-center gap-20">
                 {/* Texte à gauche */}
@@ -309,9 +304,12 @@ export default function Home() {
                   </h1>
                   <p className="text-xl text-muted-foreground">La comptabilité et la gestion fiduciaire simplifiées.</p>
                   <p className="text-muted-foreground text-lg">
-                    Nous avons transformé la comptabilité et la gestion fiduciaire avec des solutions numériques
-                    innovantes. Grâce à notre plateforme 100% en ligne, nous vous offrons une expérience fluide, rapide
-                    et transparente pour la gestion de vos finances.
+                    Fiduciaire moderne et proche de ses clients, nous proposons des solutions sur mesure, flexibles et
+                    efficaces.
+                    Nous privilégions le travail à distance, pour vous garantir une gestion fluide, une grande réactivité et un
+                    gain de temps.
+                    Des rencontres en présentiel peuvent être envisagées ponctuellement, notamment dans le cadre de
+                    relations établies ou de besoins spécifiques
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -322,9 +320,9 @@ export default function Home() {
                       variant="outline"
                       size="lg"
                       className="w-full sm:w-auto"
-                      onClick={() => scrollToSection("services")}
+                      onClick={() => scrollToSection("actualites")}
                     >
-                      Découvrir nos services
+                      Découvrir nos actualités
                     </Button>
                   </div>
                 </div>
@@ -332,7 +330,7 @@ export default function Home() {
                 {/* Image à droite */}
                 <div className="rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
                   <Image
-                    src="/logo.png"
+                    src="/accueil.jpeg"
                     alt="Image d'accueil"
                     width={500}
                     height={400}
@@ -346,30 +344,58 @@ export default function Home() {
           {/* Nous */}
           <section id="nous" className="min-h-screen flex items-center bg-white relative pt-16">
             <div className="container mx-auto px-4 py-20">
-              <div className="grid md:grid-cols-2 items-center gap-16">
-                {/* Image à gauche */}
-                <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300 order-2 md:order-1">
-                  <Image
-                    src="/logo.png"
-                    alt="Notre équipe"
-                    width={500}
-                    height={400}
-                    className="w-full h-[400px] object-cover"
-                  />
-                </div>
+              <div className="grid md:grid-cols-2 items-center gap-20">
+            {/* Image à gauche */}
+            <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300 order-2 md:order-1">
+              <Image
+                src="/Nous.jpeg"
+                alt="Notre équipe"
+                width={500}
+                height={400}
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+
 
                 {/* Texte à droite */}
                 <div className="space-y-6 order-1 md:order-2">
                   <h2 className="text-4xl font-bold">À Propos de Nous</h2>
                   <div className="h-1 w-20 bg-primary rounded-full"></div>
                   <p className="text-xl text-muted-foreground">
-                    Une équipe passionnée au service de votre réussite financière.
+                    Une comptable passionnée au service de votre réussite financière.
                   </p>
                   <p className="text-muted-foreground text-lg">
-                    Nous sommes une équipe passionnée de professionnels en comptabilité et fiduciaire qui a fait le
-                    choix de la transformation numérique. Notre mission est de rendre la gestion comptable plus simple,
-                    accessible et transparente pour tous.
+                    La fiduciaire Comptarial propose une large gamme de prestations aux PME, indépendants et
+                    particuliers.
+                    À l’écoute de nos clients, nous adoptons une approche globale, personnalisée et adaptée à chaque
+                    situation.
                   </p>
+                  <p className="text-muted-foreground text-lg">
+                    En tant que partenaire de confiance, nous vous accompagnons au plus proche de vos intérêts, avec un
+                    souci constant de rigueur, transparence et réactivité.
+                    Nous privilégions des relations durables, fondées sur l’échange, la disponibilité et la confidentialité.
+                  </p>
+                  <p className="text-muted-foreground text-lg">
+                    Notre fonctionnement repose principalement sur le travail à distance, afin de vous garantir une gestion
+                    fluide, flexible et efficace, où que vous soyez.
+                    Des rencontres en présentiel peuvent être envisagées ponctuellement, notamment dans le cadre de
+                    situations spécifiques.
+                  </p>
+                  <p className="text-muted-foreground text-lg">
+                    Grâce à la formation continue et à une veille active sur les évolutions légales, comptables, fiscales,
+                    salariales et administratives, nous restons à la hauteur des exigences actuelles.
+                    Notre complémentarité en interne nous permet de traiter chaque dossier de manière concertée,
+                    assurant ainsi une maîtrise complète et une prise en charge sur mesure.
+                  </p>
+                  <p className="text-muted-foreground text-lg">
+                    Chaque client étant unique, nous adaptons nos solutions à vos besoins réels et à vos objectifs
+                    professionnels ou personnels.
+                  </p>
+                  <p className="text-muted-foreground text-lg">
+                    Des questions ? N’hésitez pas à nous contacter : nous vous répondrons avec plaisir, dans les meilleurs
+                    délais.
+                  </p>
+
 
                   {/* Social Media Links dans la section À Propos */}
                   <div className="pt-6">
@@ -385,7 +411,7 @@ export default function Home() {
                         <span className="text-sm font-medium text-blue-600 group-hover:text-blue-700">Facebook</span>
                       </a>
                       <a
-                        href="https://www.instagram.com/comptarial"
+                        href="https://www.instagram.com/rosa.damasi.o"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 p-3 rounded-lg bg-pink-50 hover:bg-pink-100 transition-colors group"
@@ -394,7 +420,7 @@ export default function Home() {
                         <span className="text-sm font-medium text-pink-600 group-hover:text-pink-700">Instagram</span>
                       </a>
                       <a
-                        href="https://www.linkedin.com/company/comptarial"
+                        href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors group"
@@ -410,17 +436,15 @@ export default function Home() {
           </section>
 
           {/* Services */}
-          <section
-            id="services"
-            className="min-h-screen flex items-center relative bg-gradient-to-br from-gray-50 to-gray-100 pt-20"
-          >
+          <section id="services" className="min-h-screen flex items-center relative bg-gradient-to-br from-orange-100 to-orange-50 pt-20">
             <div className="container mx-auto px-4 py-10">
               <div className="text-center max-w-3xl mx-auto mb-10">
                 <h2 className="text-4xl font-bold">Nos Services</h2>
                 <div className="h-1 w-20 bg-primary rounded-full mx-auto my-4"></div>
                 <p className="text-lg text-muted-foreground">
-                  Découvrez nos services numériques pensés pour les entreprises modernes. Tout est accessible en ligne,
-                  où que vous soyez.
+                  Chaque situation étant unique, nos honoraires varient généralement entre CHF 90.- et CHF 250.- 
+                  en fonction des prestations à effectuer. Nous veillons à vous proposer des solutions sur mesure, 
+                  parfaitement adaptées à vos besoins. Un devis personnalisé peut bien entendu vous être fourni sur simple demande.
                 </p>
               </div>
 
@@ -435,18 +459,33 @@ export default function Home() {
                       className="w-6 h-6 rounded-full"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Comptabilité en ligne</h3>
+                  <h3 className="text-xl font-bold mb-2">Comptabilité</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
-                    Suivi de vos finances en temps réel, gestion de la TVA, des bilans et des déclarations fiscales sans
-                    avoir à vous déplacer.
+                    Nous vous accompagnons dans la gestion complète de votre comptabilité, 
+                    pour que vous puissiez vous concentrer sur votre activité.
                   </p>
 
                   <Accordion type="single" collapsible className="mt-auto">
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
-                        Notre plateforme vous permet d&apos;accéder à vos données comptables 24h/24, de générer des
-                        rapports personnalisés et de collaborer facilement avec notre équipe d&apos;experts.
+                        <p className="mt-2">Nos prestations incluent :</p>
+                        <ul className="list-disc pl-5 space-y-1 mt-3">
+                          <li>Procédure d’ouverture comptable</li>
+                          <li>Reprise de la comptabilité selon les normes en vigueur</li>
+                          <li>Saisie informatique des écritures</li>
+                          <li>Tenue comptable sur logiciel agréé, adaptée à votre structure</li>
+                          <li>Procédures de bouclement</li>
+                          <li>Clôture annuelle avec contrôle, régularisations et préparation aux obligations fiscales</li>
+                          <li>Établissement des états financiers (bilan, compte de résultat, annexes selon les exigences légales)</li>
+                          <li>Décomptes TVA (méthodes effective, taux de la dette fiscale nette, choix et traitement adapté à votre activité)</li>
+                          <li>Décompte de concordance annuelle</li>
+                          <li>Vérification de cohérence entre comptabilité et TVA déclarée</li>
+                          <li>Accompagnement lors de contrôles des administrations</li>
+                          <li>Préparation, gestion et suivi des vérifications fiscales ou AVS</li>
+                        </ul>
+                        <p className="mt-3">Nous mettons tout en oeuvre pour vous garantir une comptabilité fiable, à jour et conforme, 
+                        afin que vous puissiez prendre les meilleures décisions en toute sénérité.</p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -456,19 +495,29 @@ export default function Home() {
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image src="/dollar.webp" alt="Paie" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Gestion de la paie numérique</h3>
+                  <h3 className="text-xl font-bold mb-2">Salaires et gestion du personnel</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
-                    Automatisation complète de la gestion des salaires, des déclarations sociales, avec une interface
-                    claire et intuitive.
+                    Nous vous accompagnons dans la gestions administrative de vos collaborateurs avec discrétion et en conformité aux obligations légales.
                   </p>
 
                   <Accordion type="single" collapsible className="mt-auto">
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
-                        Notre solution de paie s&apos;adapte à toutes les tailles d&apos;entreprise et prend en charge
-                        l&apos;ensemble des obligations légales, vous permettant de vous concentrer sur votre cœur de
-                        métier.
+                        <p className="mt-2">Nos prestations incluent :</p>
+                        <ul className="list-disc pl-5 space-y-1 mt-3">
+                          <li>Établissement des fiches de salaires (calcul précis et conformes aux conventions applicables)</li>
+                          <li>Déclarations annuelles aux assurances sociales (coordination et envoi des données aux caisses : AVS, LPP, LAA, etc.)</li>
+                          <li>Établissement des certificats de salaire pour vos collaborateurs en fin d’année</li>
+                          <li>Gestion complète des procédures d’engagement, de départ et de licenciement</li>
+                          <li>Affiliation aux assurances sociales (mise en place des affiliations obligatoires dès l’embauche)</li>
+                          <li>Rédaction des contrats de travail conformes au droit suisse du travail</li>
+                          <li>Gestion administrative du personnel (suivi des absences, des vacances, des documents, etc.)</li>
+                        </ul>
+                        <p className="mt-3">
+                          Confiez‑nous la gestion de vos salaires et de votre personnel pour un suivi précis, conforme et sans stress,
+                          vous permettant de vous concentrer pleinement sur le développement de votre activité.
+                        </p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -478,18 +527,28 @@ export default function Home() {
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image src="/profil.webp" alt="Conseil" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Conseil et accompagnement personnalisé</h3>
+                  <h3 className="text-xl font-bold mb-2">Fiscalité</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
-                    Nos experts sont à votre disposition pour vous conseiller sur les stratégies fiscales et financières
-                    adaptées à votre situation.
+                    Que vous soyez un particulier, un indépendant ou une entreprise, nous vous accompagnons dans toutes vos démarches fisacles 
+                    avec précision, confidentialité et clarté.
                   </p>
 
                   <Accordion type="single" collapsible className="mt-auto">
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
-                        Bénéficiez de conseils personnalisés pour optimiser votre fiscalité, améliorer votre trésorerie
-                        et prendre les meilleures décisions pour le développement de votre entreprise.
+                        <p className="mt-2">Nos prestations incluent :</p>
+                        <ul className="list-disc pl-5 space-y-1 mt-3">
+                          <li>Déclaration d'impôt pour personnes physiques (optimisation selon revenus et charges)</li>
+                          <li>Déclaration d'impôt pour indépendants (prise en compte des spécificités de l'activité)</li>
+                          <li>Gestion des cas particuliers : personnes à charge supplémentaires, étudiants, biens immobiliers, titres et placements</li>
+                          <li>Rectification de l'impôt à la source (demandes de rectification et suivi auprès des autorités fiscales)</li>
+                          <li>Déclaration pour personnes morales (établissement des déclarations pour sociétés, fondations ou associations)</li>
+                        </ul>
+                        <p className="mt-3">
+                          Nous veillons au respect des délais légaux et assurons, si nécessaire, la représentation auprès des
+                          autorités fiscales pour défendre au mieux vos intérêts.
+                        </p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -507,19 +566,32 @@ export default function Home() {
                       className="w-6 h-6 rounded-full"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Déclarations fiscales automatisées</h3>
+                  <h3 className="text-xl font-bold mb-2">Services administratifs</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
-                    Simplifiez vos déclarations fiscales grâce à nos outils numériques qui automatisent les calculs et
-                    génèrent vos rapports fiscaux.
+                    Nous vous soutenons dans toutes vos démarches administratives, qu'elles soient ponctuelles ou régulières,
+                    avec réactivité, rigueur et discrétion.
                   </p>
 
                   <Accordion type="single" collapsible className="mt-auto">
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
-                        Notre système intelligent analyse vos données financières et prépare automatiquement vos
-                        déclarations fiscales, réduisant les risques d&apos;erreur et vous faisant gagner un temps
-                        précieux.
+                        <p className="mt-2">Nos prestations incluent :</p>
+                        <ul className="list-disc pl-5 space-y-1 mt-3">
+                          <li>Rédaction de courriers et documents officiels adaptés à chaque situation</li>
+                          <li>Rédaction et vérification de contrats commerciaux adaptés à vos activités</li>
+                          <li>Gestion des débiteurs et créanciers (suivi des factures, relances, échéanciers)</li>
+                          <li>Création d’entreprise (de la planification à l’immatriculation)</li>
+                          <li>Préparation de dossiers en vue de contrôles (fiscaux ou administratifs)</li>
+                          <li>Classement physique ou numérique des documents pour un accès rapide</li>
+                          <li>Élaboration de tableurs personnalisés adaptés à vos besoins de suivi</li>
+                          <li>Modification des acomptes et contrôle des bordereaux fiscaux auprès des administrations</li>
+                          <li>Rédaction de réclamations structurées et argumentées pour défendre vos intérêts</li>
+                        </ul>
+                        <p className="mt-3">
+                          Que ce soit pour alléger votre charge administrative ou fiabiliser vos procédures, nous sommes à vos côtés
+                          avec des solutions pratiques et adaptées à vos besoins spécifiques.
+                        </p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -529,19 +601,29 @@ export default function Home() {
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image src="/pdf.webp" alt="Documents" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Gestion des documents fiscaux et comptables</h3>
+                  <h3 className="text-xl font-bold mb-2">Gestion des documents</h3>
                   <p className="text-muted-foreground mb-4 flex-grow text-sm">
-                    Numérisez et stockez tous vos documents fiscaux et comptables dans notre système sécurisé,
-                    accessible à tout moment.
+                    Nous vous aidons à organiser, sécuriser et centraliser vos documents fiscaux, comptables et administratifs pour une gestion
+                    simplifiée et conforme aux éxigences.
                   </p>
 
                   <Accordion type="single" collapsible className="mt-auto">
                     <AccordionItem value="item-1" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
-                        Notre solution de gestion documentaire vous permet d&apos;organiser, de classer et de retrouver
-                        facilement tous vos documents importants, tout en garantissant leur sécurité et leur conformité
-                        légale.
+                        <p className="mt-2">Nos prestations incluent :</p>
+                        <ul className="list-disc pl-5 space-y-1 mt-3">
+                          <li>Numérisation de vos documents fiscaux et comptables pour un accès rapide</li>
+                          <li>Classement structuré des fichiers selon vos besoins spécifiques</li>
+                          <li>Mise à disposition d’un espace partagé sécurisé pour vos documents</li>
+                          <li>Archivage selon les normes en vigueur (conservation légale des documents)</li>
+                          <li>Assistance à la transition vers une gestion sans papier</li>
+                          <li>Suivi des échéances documentaires (renouvellement des déclarations, contrats, assurances, etc.)</li>
+                        </ul>
+                        <p className="mt-3">
+                          Grâce à une gestion documentaire professionnelle, vous gagnez en sérénité, en efficacité ainsi qu'en
+                          conformité vis‑à‑vis des obligations légales.
+                        </p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -557,7 +639,8 @@ export default function Home() {
                 <h2 className="text-4xl font-bold">Nos Actualités</h2>
                 <div className="h-1 w-20 bg-primary rounded-full mx-auto my-4"></div>
                 <p className="text-lg text-muted-foreground">
-                  Restez informé des dernières actualités comptables, fiscales et réglementaires.
+                  Restez informé des dernières actualités comptables, fiscales et réglementaires, pour particuliers 
+                  comme pour entreprises, et bénéficiez de conseils pratiques pour vous accompagner au quotidien.
                 </p>
               </div>
 
@@ -566,10 +649,7 @@ export default function Home() {
           </section>
 
           {/* Contact */}
-          <section
-            id="contact"
-            className="min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-gray-100 pt-16"
-          >
+          <section id="contact" className="min-h-screen flex items-center bg-gradient-to-br from-orange-100 to-orange-50 pt-16">
             <div className="container mx-auto px-4 py-20">
               <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
                 {/* Left column - Contact */}
@@ -586,8 +666,8 @@ export default function Home() {
                       <div className="bg-primary rounded-full p-3 text-white">
                         <Phone className="w-5 h-5" />
                       </div>
-                      <a href="tel:0227940432" className="text-lg">
-                        022 794 04 32
+                      <a href="tel:+41227940432" className="text-lg">
+                        +41 22 794 04 32
                       </a>
                     </div>
 
@@ -596,7 +676,7 @@ export default function Home() {
                         <Mail className="w-5 h-5" />
                       </div>
                       <a href="mailto:contact@comptarial.ch" className="text-lg">
-                        contact@comptarial.ch
+                        rosa@comptarial.ch
                       </a>
                     </div>
                   </div>
@@ -694,7 +774,7 @@ export default function Home() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 z-20">
                   <div className="flex items-center gap-2 z-20">
-                    <div className="bg-primary/10 p-2 rounded-md">
+                    <div className="p-2 rounded-md">
                       <Image
                         src="/logo.png"
                         alt="Logo"
@@ -706,7 +786,7 @@ export default function Home() {
                   </div>
                 </Link>
                 <p className="text-gray-400 mt-4">
-                  Solutions comptables et fiduciaires innovantes pour les entreprises modernes.
+                  Solutions adaptées à vos besoins.
                 </p>
 
                 {/* Social Media Links dans le Footer */}
@@ -721,7 +801,7 @@ export default function Home() {
                     <Facebook className="h-5 w-5 text-blue-400" />
                   </a>
                   <a
-                    href="https://www.instagram.com/comptarial"
+                    href="https://www.instagram.com/rosa.damasi.o"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
@@ -730,7 +810,7 @@ export default function Home() {
                     <Instagram className="h-5 w-5 text-pink-400" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/comptarial"
+                    href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
@@ -792,27 +872,27 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li>
                     <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-                      Comptabilité en ligne
+                      Comptabilité
                     </a>
                   </li>
                   <li>
                     <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-                      Gestion de la paie numérique
+                      Salaires et gestion du personnel
                     </a>
                   </li>
                   <li>
                     <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-                      Conseil et accompagnement personnalisé
+                      Fiscalité
                     </a>
                   </li>
                   <li>
                     <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-                      Déclarations fiscales automatisées
+                      Services administratifs
                     </a>
                   </li>
                   <li>
                     <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-                      Gestion des documents fiscaux et comptables
+                      Gestion des documents
                     </a>
                   </li>
                 </ul>
