@@ -60,6 +60,7 @@ export default function Home() {
     }
   }
 
+
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -68,16 +69,28 @@ export default function Home() {
     const form = e.currentTarget
     const formData = new FormData(form)
 
-    const data = {
-      name: formData.get("name")?.toString() || "",
-      email: formData.get("email")?.toString() || "",
-      subject: formData.get("subject")?.toString() || "",
-      message: formData.get("message")?.toString() || "",
+    const name = formData.get("name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const message = formData.get("message")?.toString().trim() || "";
+
+    if (!name || !email || !message) {
+    toast.error("Veuillez remplir tous les champs.", {
+      icon: <AlertCircle className="h-5 w-5" />,
+    });
+    setIsSubmitting(false);
+    return;
     }
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi du message.");
+      }
 
       toast.success("Message envoyé !", {
         description: "Nous vous répondrons dans les plus brefs délais.",
@@ -698,19 +711,6 @@ export default function Home() {
                         required
                         className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                         placeholder="Email"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="subject" className="block font-medium mb-2">
-                        Sujet
-                      </label>
-                      <input
-                        name="subject"
-                        id="subject"
-                        required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                        placeholder="Sujet du message"
                       />
                     </div>
 
