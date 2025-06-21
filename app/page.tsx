@@ -104,6 +104,42 @@ export default function Home() {
     }
   }
 
+  const handleInstagramClick = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = "instagram://user?username=rosa.damasi.o";
+      setTimeout(() => {
+        window.location.href = "https://www.instagram.com/rosa.damasi.o";
+      }, 1000);
+    } else {
+      window.open("https://www.instagram.com/rosa.damasi.o", "_blank");
+    }
+  };
+
+  const handleFacebookClick = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = "fb://page/100063735014393";
+      setTimeout(() => {
+        window.location.href = "https://www.facebook.com/comptarial";
+      }, 1000);
+    } else {
+      window.open("https://www.facebook.com/comptarial", "_blank");
+    }
+  };
+
+  const handleLinkedinClick = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = "linkedin://in/rosa-damasio-19a148b6";
+      setTimeout(() => {
+        window.location.href = "https://ch.linkedin.com/in/rosa-damasio-19a148b6";
+      }, 1000);
+    } else {
+      window.open("https://ch.linkedin.com/in/rosa-damasio-19a148b6", "_blank");
+    }
+  };
+
   return (
     <>
       <Toaster position="bottom-right" richColors closeButton />
@@ -202,33 +238,30 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 {/* Social Media Links - Desktop */}
                 <div className="hidden md:flex items-center gap-3">
-                  <a
-                    href="https://www.facebook.com/comptarial"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={handleFacebookClick}
                     className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                     aria-label="Facebook"
+                    type="button"
                   >
                     <Facebook className="h-4 w-4 text-primary" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/rosa.damasi.o"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  </button>
+                  <button
+                    onClick={handleInstagramClick}
                     className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                     aria-label="Instagram"
+                    type="button"
                   >
                     <Instagram className="h-4 w-4 text-primary" />
-                  </a>
-                  <a
-                    href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  </button>
+                  <button
+                    onClick={handleLinkedinClick}
                     className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                     aria-label="LinkedIn"
+                    type="button"
                   >
                     <Linkedin className="h-4 w-4 text-primary" />
-                  </a>
+                  </button>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -282,33 +315,30 @@ export default function Home() {
 
             {/* Social Media Links - Mobile */}
             <div className="flex items-center gap-4 mt-4">
-              <a
-                href="https://www.facebook.com/comptarial"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={handleFacebookClick}
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                 aria-label="Facebook"
+                type="button"
               >
-                <Facebook className="h-6 w-6 text-primary" />
-              </a>
-              <a
-                href="https://www.instagram.com/rosa.damasi.o"
-                target="_blank"
-                rel="noopener noreferrer"
+                <Facebook className="h-4 w-4 text-primary" />
+              </button>
+              <button
+                onClick={handleInstagramClick}
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                 aria-label="Instagram"
+                type="button"
               >
-                <Instagram className="h-6 w-6 text-primary" />
-              </a>
-              <a
-                href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
-                target="_blank"
-                rel="noopener noreferrer"
+                <Instagram className="h-4 w-4 text-primary" />
+              </button>
+              <button
+                onClick={handleLinkedinClick}
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                 aria-label="LinkedIn"
+                type="button"
               >
-                <Linkedin className="h-6 w-6 text-primary" />
-              </a>
+                <Linkedin className="h-4 w-4 text-primary" />
+              </button>
             </div>
           </div>
         </header>
@@ -406,33 +436,30 @@ export default function Home() {
                   <div className="pt-6">
                     <p className="text-sm font-medium text-gray-700 mb-3">Suivez-nous sur nos réseaux sociaux :</p>
                     <div className="flex items-center gap-4">
-                      <a
-                        href="https://www.facebook.com/comptarial"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={handleFacebookClick}
                         className="flex items-center gap-2 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors group"
+                        aria-label="Facebook"
+                        type="button"
                       >
-                        <Facebook className="h-5 w-5 text-blue-600" />
-                        <span className="text-sm font-medium text-blue-600 group-hover:text-blue-700">Facebook</span>
-                      </a>
-                      <a
-                        href="https://www.instagram.com/rosa.damasi.o"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        <Facebook className="h-4 w-4 text-primary" />
+                      </button>
+                      <button
+                        onClick={handleInstagramClick}
                         className="flex items-center gap-2 p-3 rounded-lg bg-pink-50 hover:bg-pink-100 transition-colors group"
+                        aria-label="Instagram"
+                        type="button"
                       >
-                        <Instagram className="h-5 w-5 text-pink-600" />
-                        <span className="text-sm font-medium text-pink-600 group-hover:text-pink-700">Instagram</span>
-                      </a>
-                      <a
-                        href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        <Instagram className="h-4 w-4 text-primary" />
+                      </button>
+                      <button
+                        onClick={handleLinkedinClick}
                         className="flex items-center gap-2 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors group"
+                        aria-label="LinkedIn"
+                        type="button"
                       >
-                        <Linkedin className="h-5 w-5 text-blue-700" />
-                        <span className="text-sm font-medium text-blue-700 group-hover:text-blue-800">LinkedIn</span>
-                      </a>
+                        <Linkedin className="h-4 w-4 text-primary" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -785,33 +812,30 @@ export default function Home() {
 
                 {/* Social Media Links dans le Footer */}
                 <div className="flex items-center gap-3 mt-6">
-                  <a
-                    href="https://www.facebook.com/comptarial"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={handleFacebookClick}
                     className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
                     aria-label="Facebook"
+                    type="button"
                   >
-                    <Facebook className="h-5 w-5 text-blue-400" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/rosa.damasi.o"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    <Facebook className="h-4 w-4 text-primary" />
+                  </button>
+                  <button
+                    onClick={handleInstagramClick}
                     className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
                     aria-label="Instagram"
+                    type="button"
                   >
-                    <Instagram className="h-5 w-5 text-pink-400" />
-                  </a>
-                  <a
-                    href="https://ch.linkedin.com/in/rosa-damasio-19a148b6"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    <Instagram className="h-4 w-4 text-primary" />
+                  </button>
+                  <button
+                    onClick={handleLinkedinClick}
                     className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
                     aria-label="LinkedIn"
+                    type="button"
                   >
-                    <Linkedin className="h-5 w-5 text-blue-300" />
-                  </a>
+                    <Linkedin className="h-4 w-4 text-primary" />
+                  </button>
                 </div>
               </div>
 
