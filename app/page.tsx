@@ -133,10 +133,10 @@ export default function Home() {
     if (isMobile) {
       window.location.href = "linkedin://in/rosa-damasio-19a148b6";
       setTimeout(() => {
-        window.location.href = "https://ch.linkedin.com/in/rosa-damasio-19a148b6";
+        window.location.href = "https://ch.linkedin.com/in/rosa-damasio-comptarial-19a148b6";
       }, 1000);
     } else {
-      window.open("https://ch.linkedin.com/in/rosa-damasio-19a148b6", "_blank");
+      window.open("https://ch.linkedin.com/in/rosa-damasio-comptarial-19a148b6", "_blank");
     }
   };
 
