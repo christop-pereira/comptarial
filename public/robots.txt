@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://comptarial.ch
+
+# Sitemaps
+Sitemap: https://comptarial.ch/sitemap.xml
