@@ -476,7 +476,7 @@ export default function Home() {
                 <h2 className="text-4xl font-bold">Nos Services</h2>
                 <div className="h-1 w-20 bg-primary rounded-full mx-auto my-4"></div>
                 <p className="text-lg text-muted-foreground">
-                  Chaque situation étant unique, nos honoraires varient de CHF 90.- à CHF 250.- 
+                  Chaque situation étant unique, nos honoraires varient de CHF 90.- à CHF 250.- par heure
                   en fonction des prestations à effectuer. Un devis personnalisé vous est fourni sur demande.
                 </p>
               </div>
