@@ -131,7 +131,7 @@ export default function Home() {
   const handleLinkedinClick = () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
-      window.location.href = "linkedin://in/rosa-damasio-19a148b6";
+      window.location.href = "linkedin://in/rosa-damasio-comptarial-19a148b6";
       setTimeout(() => {
         window.location.href = "https://ch.linkedin.com/in/rosa-damasio-comptarial-19a148b6";
       }, 1000);
