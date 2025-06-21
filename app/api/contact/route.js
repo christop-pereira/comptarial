@@ -8,6 +8,13 @@ export async function POST(request) {
   const SMTP_PASS = process.env.SMTP_PASS;
   const MAIL_DESTINATION = process.env.MAIL_DESTINATION;
 
+  if (!SMTP_USER || !SMTP_PASS || !MAIL_DESTINATION) {
+    return new Response(
+      JSON.stringify({ success: false, error: 'Missing SMTP configuration' }),
+      { status: 500 }
+    );
+  }
+
   if (!name || !email || !message) {
     return new Response(
       JSON.stringify({ success: false, error: 'Missing fields' }),
