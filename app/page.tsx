@@ -75,11 +75,11 @@ export default function Home() {
     const message = formData.get("message")?.toString().trim() || "";
 
     if (!name || !email || !message) {
-    toast.error("Veuillez remplir tous les champs.", {
-      icon: <AlertCircle className="h-5 w-5" />,
-    });
-    setIsSubmitting(false);
-    return;
+      toast.error("Veuillez remplir tous les champs.", {
+        icon: <AlertCircle className="h-5 w-5" />,
+      });
+      setIsSubmitting(false);
+      return;
     }
 
     try {
@@ -89,10 +89,11 @@ export default function Home() {
         body: JSON.stringify({ name, email, message })
       });
 
-      console.log(response)
+      const result = await response.json();
 
       if (!response.ok) {
-        throw new Error("Erreur lors de l'envoi du message.");
+        console.error(result);
+        throw new Error(result.error || "Erreur lors de l'envoi du message.");
       }
 
       toast.success("Message envoyé !", {
