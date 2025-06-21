@@ -454,8 +454,8 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+              <div className="grid md:grid-cols-3 gap-6 items-start">
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image
                       src="/comptabilite.webp"
@@ -472,7 +472,7 @@ export default function Home() {
                   </p>
 
                   <Accordion type="single" collapsible>
-                    <AccordionItem value="item-1" className="border-b-0">
+                    <AccordionItem value="comptabilite" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
                         <p className="mt-2">Nos prestations incluent :</p>
@@ -493,7 +493,7 @@ export default function Home() {
                   </Accordion>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image src="/dollar.webp" alt="Paie" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
@@ -503,7 +503,7 @@ export default function Home() {
                   </p>
 
                   <Accordion type="single" collapsible>
-                    <AccordionItem value="item-1" className="border-b-0">
+                    <AccordionItem value="salaires" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
                         <p className="mt-2">Nos prestations incluent :</p>
@@ -525,7 +525,7 @@ export default function Home() {
                   </Accordion>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image src="/profil.webp" alt="Conseil" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
@@ -536,7 +536,7 @@ export default function Home() {
                   </p>
 
                   <Accordion type="single" collapsible>
-                    <AccordionItem value="item-1" className="border-b-0">
+                    <AccordionItem value="fiscalite" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
                         <p className="mt-2">Nos prestations incluent :</p>
@@ -557,8 +557,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+              <div className="grid md:grid-cols-2 gap-6 mt-6 items-start">
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image
                       src="/argent.webp"
@@ -575,7 +575,7 @@ export default function Home() {
                   </p>
 
                   <Accordion type="single" collapsible>
-                    <AccordionItem value="item-1" className="border-b-0">
+                    <AccordionItem value="admin" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
                         <p className="mt-2">Nos prestations incluent :</p>
@@ -599,7 +599,7 @@ export default function Home() {
                   </Accordion>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
                   <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Image src="/pdf.webp" alt="Documents" width={24} height={24} className="w-6 h-6 rounded-full" />
                   </div>
@@ -610,7 +610,7 @@ export default function Home() {
                   </p>
 
                   <Accordion type="single" collapsible>
-                    <AccordionItem value="item-1" className="border-b-0">
+                    <AccordionItem value="documents" className="border-b-0">
                       <AccordionTrigger className="text-primary py-1 px-0 text-sm">En savoir plus</AccordionTrigger>
                       <AccordionContent className="text-sm">
                         <p className="mt-2">Nos prestations incluent :</p>
