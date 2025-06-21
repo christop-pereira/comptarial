@@ -17,7 +17,6 @@ export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [activeSection, setActiveSection] = useState("accueil")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   // Handle scroll and update active section
@@ -27,15 +26,9 @@ export default function Home() {
       const sections = document.querySelectorAll("section")
       const scrollPosition = window.scrollY + window.innerHeight / 3
 
-      // Check if page is scrolled for header styling
-      if (window.scrollY > 10) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop
+        const rect = section.getBoundingClientRect()
+        const sectionTop = rect.top + window.scrollY
         const sectionHeight = section.offsetHeight
         const sectionId = section.getAttribute("id") || ""
 
@@ -54,10 +47,9 @@ export default function Home() {
     setIsMenuOpen(false)
     const section = document.getElementById(sectionId)
     if (section) {
-      window.scrollTo({
-        top: section.offsetTop,
-        behavior: "smooth",
-      })
+      const yOffset = -90
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset
+      window.scrollTo({ top: y, behavior: "smooth" })
     }
   }
 
