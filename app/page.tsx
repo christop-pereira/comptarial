@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { toast, Toaster } from "sonner"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Menu, X, Phone, Mail, MapPin, CheckCircle, AlertCircle, Facebook, Instagram, Linkedin } from "lucide-react"
-import { ArticlesCarousel } from "@/components/articles/articles-carousel"
+import { ArticlesCarousel } from "@/components/articles/articles-carousel-multi"
 import { ArrowUp } from "lucide-react"
 import { FadeInSection } from "@/components/FadeInSection"
 

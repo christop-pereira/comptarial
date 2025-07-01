@@ -13,6 +13,13 @@ const articlesData: Article[] = [
     date: "18 Juin 2025",
     description: "Découvrez vos obligations en matière d'AVS de 18 à 65 ans.",
     pdfUrl: "cotisations-AVS.pdf",
+  },
+  {
+    id: 2,
+    title: "10 Conseils pour démarrer votre activité",
+    date: "30 Juin 2025",
+    description: "Lancez votre activité en toute confiance grâce à 10 conseils essentiels.",
+    pdfUrl: "10conseils-pour-demarrer.pdf",
   }
 ]
 
