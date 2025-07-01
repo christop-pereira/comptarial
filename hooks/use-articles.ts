@@ -24,12 +24,14 @@ const articlesData: Article[] = [
 ]
 
 export function useArticles() {
+  const sortedArticles = [...articlesData].sort((a, b) => b.id - a.id)
+
   const handleArticleClick = (pdfUrl: string) => {
     window.open(pdfUrl, "_blank")
   }
 
   return {
-    articles: articlesData,
+    articles: sortedArticles,
     handleArticleClick,
   }
 }
