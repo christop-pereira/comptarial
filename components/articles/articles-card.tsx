@@ -24,7 +24,7 @@ export function ArticleCard({ article, onClick }: ArticleCardProps) {
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+          <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors md:line-clamp-2">
             {article.title}
           </h3>
           <p className="text-sm text-gray-500 mb-3">{article.date}</p>

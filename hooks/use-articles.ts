@@ -20,6 +20,13 @@ const articlesData: Article[] = [
     date: "30 Juin 2025",
     description: "Lancez votre activité en toute confiance grâce à 10 conseils essentiels.",
     pdfUrl: "10conseils-pour-demarrer.pdf",
+  },
+  {
+    id: 3,
+    title: "5 Points clés pour une routine de suivi comptable",
+    date: "15 Juillet 2025",
+    description: "Gardez le contrôle de votre comptabilité avec 5 gestes simples et essentiels",
+    pdfUrl: "5points-clés-routine.pdf",
   }
 ]
 
