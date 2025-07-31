@@ -19,14 +19,21 @@ const articlesData: Article[] = [
     title: "10 Conseils pour démarrer votre activité",
     date: "30 Juin 2025",
     description: "Lancez votre activité en toute confiance grâce à 10 conseils essentiels.",
-    pdfUrl: "10conseils-pour-demarrer.pdf",
+    pdfUrl: "10-conseils-pour-demarrer.pdf",
   },
   {
     id: 3,
     title: "5 Points clés pour une routine de suivi comptable",
     date: "15 Juillet 2025",
-    description: "Gardez le contrôle de votre comptabilité avec 5 gestes simples et essentiels",
-    pdfUrl: "5points-clés-routine.pdf",
+    description: "Gardez le contrôle de votre comptabilité avec 5 gestes simples et essentiels.",
+    pdfUrl: "5-points-clés-routine.pdf",
+  },
+  {
+    id: 4,
+    title: "10 Erreurs comptables à éviter",
+    date: "27 Juillet 2025",
+    description: "Évitez les pièges comptables les plus courants grâce à 10 erreurs à ne pas commettre.",
+    pdfUrl: "10-erreurs-comptables-a-eviter.pdf",
   }
 ]
 
