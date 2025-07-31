@@ -28,7 +28,7 @@ export function ArticleCard({ article, onClick }: ArticleCardProps) {
             {article.title}
           </h3>
           <p className="text-sm text-gray-500 mb-3">{article.date}</p>
-          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">{article.description}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed">{article.description}</p>
         </div>
         <ExternalLink className="h-4 w-4 text-primary ml-3 group-hover:scale-110 transition-transform flex-shrink-0" />
       </div>
