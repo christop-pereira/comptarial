@@ -34,6 +34,13 @@ const articlesData: Article[] = [
     date: "27 Juillet 2025",
     description: "Évitez les pièges comptables les plus courants grâce à 10 erreurs à ne pas commettre.",
     pdfUrl: "10-erreurs-comptables-a-eviter.pdf",
+  },
+  {
+    id: 5,
+    title: "Etapes clés pour la TVA en Suisse",
+    date: "27 Juillet 2025",
+    description: "Comprenez les étapes essentielles pour gérer la TVA en Suisse.",
+    pdfUrl: "etapes-cles-tva.pdf",
   }
 ]
 
